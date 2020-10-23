@@ -10,16 +10,21 @@ var userMail = prompt('Ciao! Inserisci la tua mail.')
 console.log('Mailing List:' + mailingList);
 console.log('User Mail:' + userMail);
 
-for (var i = 0; i < mailingList.length; i++) {
-  var accepted = false;
+var accepted = false;
 
-  if (mailingList[i] == userMail.value) {
+for (var i = 0; i < mailingList.length; i++) {
+
+  if (mailingList[i] == userMail) {
     accepted = true;
   }
-
-  if (accepted) {
-  document.getElementById('message').innerHTML = 'email accepted';
-  } else {
-  document.getElementById('message').innerHTML = 'email denied';
-  }
 }
+
+if (accepted) {
+  document.getElementById('message').innerHTML = 'Accesso Consentito';
+} else {
+  document.getElementById('message').innerHTML = 'Accesso Negato';
+}
+
+/* Gioco dei dadi
+Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
+Stabilire il vincitore, in base a chi fa il punteggio più alto. */
